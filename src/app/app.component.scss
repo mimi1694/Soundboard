@@ -1,9 +1,10 @@
-div {
-  background-image: url(/assets/bg.jpg);
-  height: 100vh;
-  width: 100vw;
-  z-index: -100;
-  display: flex;
-  justify-content: center;
-  color: white;
+:host {
+  background-image: url(/assets/lizzoFace.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
