@@ -1,3 +1,2 @@
-<button (click)="playSound(audio)">
-    <audio #audio [src]="soundSrc"></audio>
-</button>
+<button mat-flat-button color="primary" (click)="playSound(audio)">{{ soundText }}</button>
+<audio #audio [src]="soundSrc"></audio>

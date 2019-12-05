@@ -7,10 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class SoundComponent {
     @Input() soundSrc: string;
+    @Input() soundText: string;
 
     constructor() {}
 
     playSound(audio: HTMLAudioElement) {
-        audio.play();
+      audio.play();
     }
 }
