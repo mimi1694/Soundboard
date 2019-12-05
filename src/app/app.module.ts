@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SoundboardModule } from './soundboard/soundboard.module';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
     AppRoutingModule,
     SoundboardModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
