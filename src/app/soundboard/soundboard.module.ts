@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { SoundComponent } from './sound/sound.component';
 import { SoundboardComponent } from './soundboard.component';
-import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MaterialModule
   ],
   providers: [],
 })

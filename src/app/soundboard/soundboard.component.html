@@ -1,3 +1,37 @@
-<sound [soundSrc]="amen" soundText="Amen!"></sound>
+<!-- <sound [soundSrc]="amen" soundText="Amen!"></sound>
 <sound [soundSrc]="lizzo_amen" soundText="Play Me!"></sound>
-<sound [soundSrc]="laugh" soundText="~Laugh~"></sound>
+<sound [soundSrc]="laugh" soundText="~Laugh~"></sound> -->
+
+<div class="example-container">
+  <h2>Sounds</h2>
+
+  <div
+    style="background-color: blue;"
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    #soundsList="cdkDropList"
+    [cdkDropListData]="sounds"
+    [cdkDropListConnectedTo]="[mixerList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let sound of sounds" cdkDrag>
+        <sound [soundSrc]="sound.sound" [soundText]="sound.text"></sound>
+    </div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>mixer</h2>
+
+  <div
+    style="background-color: pink;"
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    #mixerList="cdkDropList"
+    [cdkDropListData]="mixers"
+    [cdkDropListConnectedTo]="[soundsList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let sound of mixers" cdkDrag>{{sound.text}}</div>
+  </div>
+</div>
