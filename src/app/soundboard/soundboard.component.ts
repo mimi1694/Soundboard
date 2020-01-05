@@ -12,26 +12,23 @@ interface SoundData {
   styleUrls: ['./soundboard.component.scss']
 })
 export class SoundboardComponent implements OnInit {
-    sounds: SoundData[] = [
-        { sound: "../../assets/amen.mp3", text: "Amen!" },
-        { sound: "../../assets/lizzoAmen.mp3", text: "Lizzo Preach" },
-        { sound: "../../assets/laugh.mp3", text: "Laugh" }
+    bytes: SoundData[] = [
+      { sound: "../../assets/amen.mp3", text: "Amen!" },
+      { sound: "../../assets/lizzoAmen.mp3", text: "Preach" },
+      { sound: "../../assets/laugh.mp3", text: "Laugh" }
     ];
+
+    beats: SoundData[] = [
+      { sound: "../../assets/funk_city.mp3", text: "Funky" },
+      { sound: "../../assets/retro_gamer.mp3", text: "Retro" },
+      { sound: "../../assets/slammin.mp3", text: "Slammin" },
+      { sound: "../../assets/upstep.mp3", text: "Up Step" }
+    ];
+
     mixers: SoundData[] = [];
 
     constructor() {}
 
     ngOnInit(): void {
     }
-
-    drop(event: CdkDragDrop<string[]>) {
-        if (event.previousContainer === event.container) {
-          moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-        } else {
-          copyArrayItem(event.previousContainer.data,
-                            event.container.data,
-                            event.previousIndex,
-                            event.currentIndex);
-        }
-      }
 }
